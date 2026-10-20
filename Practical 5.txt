@@ -1,0 +1,32 @@
+Practical - 5
+
+1.
+Login to AWS with your credentials
+2.
+Type s3 in search bar and select first option “S3”.
+3.
+Under “S3” select Buckets
+4.
+Click on “Create Bucket”
+5.
+Give bucket name as “cloud-storage-demo-2026”
+6.
+Click on “Create Bucket”
+7.
+Your Bucket is created
+8.
+Click on “Upload” Button
+9.
+Click on “Add files” and select any file from dialog box
+10. File is Added
+11. Now scroll down and click on “Upload” button
+12. File is uploaded successfully.
+13. Now click on “Close” button
+14. Select the CheckBox to select the file and press “Delete” 
+button
+15. Type “permanently delete” in text box and press “Delete 
+Objects” button.
+16. File is deleted, Select “Close” button
+17. Click on Buckets
+18. Select the Bucket and press “Delete” button
+19. Type the bucket name in text box and press “Delete Bucket” Button

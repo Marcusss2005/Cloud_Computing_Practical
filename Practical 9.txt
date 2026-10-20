@@ -1,0 +1,82 @@
+Sign Up and Explore Azure ML Studio. Create and Run at least one Azure ML Pipeline interface
+
+Step 1: Open Azure Portal and log in.
+Open a web browser and enter portal.azure.com. Enter the Microsoft account credentials provided for the practical. After successful login, the Azure portal home page will be displayed.
+
+Step 2: Search for Machine Learning.
+At the top of the Azure portal, click the Search resources, services, and docs box. Type Machine Learning. From the Services results, select Machine Learning.
+
+Step 3: Start creating the Machine Learning workspace.
+On the Machine Learning page, click Create. The Create Machine Learning workspace page opens with the Basics tab.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/how-to-manage-workspace?tabs=azure-portal
+
+Step 4: Select Subscription and Resource Group.
+Under Project details, select the required Azure Subscription. For Resource group, select an existing resource group or click Create new and enter a name such as RG-AzureML-Practical9.
+
+Step 5: Enter workspace details.
+In Workspace details, enter a unique Workspace name such as ML-Practical9-<Name>. Select a suitable Region. Keep the default Storage account, Key vault and Application Insights settings unless the instructor specifies different values.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/how-to-manage-workspace?tabs=azure-portal
+
+Step 6: Review and create the workspace.
+Click Review + create. Check the subscription, resource group, workspace name and region carefully. If validation passes, click Create.
+
+Step 7: Open the created workspace.
+Wait until the deployment is completed. Click Go to resource. The workspace overview page is displayed. Locate the Studio web URL/Launch Studio option and open it.
+
+Step 8: Select the workspace in Azure ML Studio.
+Azure Machine Learning Studio opens in the browser. If the workspace selection page appears, select the correct subscription and the workspace created in the previous steps, then click Get started.
+
+Step 9: Explore the Studio navigation.
+Observe the left navigation menu. The Authoring area contains tools such as Notebooks, Automated ML and Designer. Assets contains Data, Jobs, Models and other resources. This step demonstrates the graphical interface used for machine learning activities.
+
+Step 10: Open Automated ML.
+From the left navigation, under Authoring, click Automated ML. The Automated ML page appears with the New Automated ML job button.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml?view=azureml-api-2
+
+Step 11: Start a new Automated ML job.
+Click New Automated ML job. In the training method screen, keep Train automatically selected and continue to the job configuration.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml?view=azureml-api-2
+
+Step 12: Enter Basic settings.
+Enter a suitable Job name and Experiment name, for example automl-practical9. Check the subscription/workspace information and click Next.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml?view=azureml-api-2
+
+Step 13: Create or select a dataset/data asset.
+On the Task type & data section, select the required task. If a dataset has not already been uploaded, click Create to create a data asset. Select Tabular for a CSV dataset and choose From local files as the data source.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml?view=azureml-api-2
+
+Step 14: Upload the CSV dataset.
+Use Upload files to select a sample CSV file such as Iris.csv or another classification dataset supplied by the instructor. Continue through the upload screens and verify the delimiter, encoding and column-header settings.
+
+Step 15: Review the dataset schema.
+Check the columns displayed by Azure ML. Make sure the columns are recognized with the correct data types. Exclude irrelevant columns only when required. Continue to the review page and click Create to register the data asset.
+
+Step 16: Select Classification as the task type.
+Return to the Automated ML job configuration. From Select task type, choose Classification for a classification problem. Select the data asset created in the previous step.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml?view=azureml-api-2
+
+Step 17: Select the target column.
+Open the Target column list and select the column that contains the class/label to be predicted, for example Species for an Iris dataset. Review the selected target before continuing.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml?view=azureml-api-2
+
+Step 18: Configure the compute target.
+Select an available Azure ML compute target. If no compute is available, use the +New option to create a suitable compute target/cluster according to the lab subscription and instructor instructions.
+
+Step 19: Review the complete job configuration.
+Move to the Review page. Verify the experiment name, task type, dataset, target column and compute target. Correct any error before submitting the job.
+
+Step 20: Submit and run the Automated ML job.
+Click Submit training job/Finish. The Job details page opens. The status changes as Azure ML prepares and executes the experiment.
+
+Step 21: Monitor the run.
+Wait for the job to finish. Open the job details page and observe the progress, status and child runs/iterations. Automated ML tests multiple algorithms and configurations automatically.
+
+Step 22: Open Models and compare results.
+After completion, open Models or Models + child jobs. Review the algorithms and evaluation metrics. Models can be opened individually to inspect their Overview and Metrics information.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml?view=azureml-api-2
+
+Step 23: View the best model.
+Select the model that appears at the top of the experiment results according to the selected metric. Record the model name and important metric values in the practical notebook.
+Real screenshot reference: https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml?view=azureml-api-2
+
+Step 24: Complete the practical.

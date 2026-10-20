@@ -1,0 +1,87 @@
+Build a Container Application and Upload on a 
+cloud platform of your choice.
+
+Step 1: Open the skill.google website
+Search - Secure Software Supply Chain: Using Cloud Build & Cloud 
+Deploy to Deploy Containerized Applications
+
+Step 2: Start the Lab and open Google Cloud Console
+Using Artifact Registry (GUI + Cloud Shell)
+
+1.
+Enable Required APIs (GUI)
+2.
+Select APIs & Services → Library
+3.
+Search for Cloud Build API
+4.
+Select Cloud Build API
+5.
+It Shows Enabled
+6.
+Go back and search for Artifact Registry API
+Artifact means Docker Image
+7.
+Select Artifact Registry API
+8.
+It shows Enabled
+9.
+Click on APIs & Services
+10. Search Artifact Registry in search box and select
+11. Click on Create repository button
+12. For your region open IAM & Admin → Organization Policies in new tab
+13. Select View active policies
+14. Search for below service and select
+15. Select anyone which is allowed (i.e. us-west1)
+16. Click on Repositories
+17. You can find
+18. Click on button to Activate Cloud Shell
+19. Create a project folder
+mkdir my-docker-app
+cd my-docker-app
+20. Create a Dockerfile (GUI + Editor)
+Click on Open Editor
+21. Select my-docker-app folder and click on new file icon
+22. Enter file name as: Dockerfile
+23. Write code below in that file
+# Use official Python image
+FROM python:3.10-slim
+# Set working directory
+WORKDIR /app
+# Copy files
+COPY . .
+# Install dependencies
+RUN pip install flask
+# Expose port
+EXPOSE 8080
+# Run app
+CMD ["python", "app.py"]
+24. Select my-docker-app folder and click on new file icon – Give file
+name as app.py
+25. Write below code
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def hello():
+ return "Hello from Docker on GCP!"
+if __name__ == "__main__":
+ app.run(host="0.0.0.0", port=8080)
+26. Click on Open Terminal
+27. Write below code: use your PROJECT_ID from skills.google
+gcloud builds submit . 
+--tag
+europe-west1-
+docker.pkg.dev/PROJECT_ID/my-docker-repo/my-image
+28. So, your new code is
+gcloud builds submit . --tag europe-west1-
+docker.pkg.dev/qwiklabs-gcp-02-2e3941ec82f8/my-dockerrepo/my-image
+29. Now close terminal
+30. Click on my-docker-repo
+31. You will find the Docker image
+32. Open Cloud Shell again and write below code
+docker run 
+--rm 
+-p 8080:8080 
+europe-west1-
+docker.pkg.dev/qwiklabs-gcp-02-2e3941ec82f8/my-dockerrepo/my-image
+33.You will get in browser

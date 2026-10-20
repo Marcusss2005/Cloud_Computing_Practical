@@ -1,0 +1,33 @@
+Create your Amazon EC2 Instances for Windows and 
+Linux.
+
+Using Cloud SQL
+1.
+Login to AWS with your credentials
+2.
+Type ec2 in search bar and select first option “ec2”.
+3.
+Under “ec2” select Instances
+4.
+Click on “Launch Instences”
+5.
+Give VM name as “My-VM-1”
+6.
+Select Operating System, “Amazon Linux” or “Windows”
+7.
+Set Key pair as default
+8.
+In Firewall settings allow below services
+9.
+Click on “Launch Instance” Button
+10. VM Created.
+11. Click on Instances
+12. Select the My-VM-1, and press Connect button
+13. Scroll down and press Connect button again, new tab will 
+be open.
+14. Now, Goto the First tab in browser
+15.Click on instances
+16. Select “Terminate (delete) instance” from Instance Tab.
+17. Select checkbox (Skip OS Shutdown) and press Terminate 
+(Delete) 
+18. Check the Instance state – Must shows (Terminated)

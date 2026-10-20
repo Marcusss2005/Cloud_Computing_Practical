@@ -1,0 +1,68 @@
+Visualize your data using Amazon QuickSight
+Aim: To use Amazon QuickSight to connect to a data source, create an analysis, generate different data visualizations and publish the analysis as a dashboard.
+
+Step 1: Open AWS Management Console.
+Open the AWS Management Console in a web browser and sign in using the AWS account provided for the practical. Select the required AWS Region if prompted.
+
+Step 2: Open Amazon QuickSight.
+Use the AWS Console search bar and type QuickSight. Select Amazon QuickSight from the service results. If QuickSight is being used for the first time, complete the initial account/setup process.
+
+Step 3: Open the QuickSight home page.
+After setup, open the QuickSight home page. Observe the left navigation area and the Analyses and Datasets sections.
+
+Step 4: Open Analyses.
+From the left navigation, select Analyses. Click New analysis/Create analysis according to the interface displayed.
+Real screenshot reference: https://docs.aws.amazon.com/quick/latest/userguide/quickstart-createanalysis.html
+
+Step 5: Create or select a dataset.
+On the dataset selection page, choose an existing dataset or select Create dataset/New dataset. For this practical, S3 or Athena can be used when the required data is available. A sample CSV dataset can also be used.
+Real screenshot reference: https://docs.aws.amazon.com/quick/latest/userguide/quickstart-createanalysis.html
+
+Step 6: Upload a sample CSV file (alternative method).
+If using a local CSV file, choose Upload file, select the CSV file from the computer and confirm the file upload settings. Check the detected delimiter, header and data types.
+
+Step 7: Create the dataset.
+Complete the dataset configuration. If QuickSight shows Visualize, select Visualize to move into the analysis workspace. The dataset should appear in the Data pane.
+
+Step 8: Start the analysis.
+If the dataset is selected from the dataset list, choose Use in analysis/Create analysis. Select the required sheet type if the interface asks for it and open the analysis canvas.
+Real screenshot reference: https://docs.aws.amazon.com/quick/latest/userguide/creating-an-analysis.html
+
+Step 9: Understand the analysis screen.
+Observe the Data/Fields pane, Visuals pane and the analysis canvas. The fields represent columns from the dataset and the visual types determine how the data will be displayed.
+Real screenshot reference: https://docs.aws.amazon.com/quick/latest/userguide/creating-an-analysis.html
+
+Step 10: Create a bar chart.
+Add a visual and choose a bar chart. Select a categorical field such as Category for the category/X-axis area. Select a numeric field such as Sales for the value/Y-axis area. Verify that the chart is generated.
+Real screenshot reference: https://docs.aws.amazon.com/quick/latest/userguide/quickstart-createanalysis.html
+
+Step 11: Create a pie/donut chart.
+Add another visual and choose Pie chart or Donut chart. Place a category field in the group/category field and a numeric measure such as Sales in the value field.
+Real screenshot reference: https://docs.aws.amazon.com/quick/latest/userguide/creating-an-analysis.html
+
+Step 12: Create a line chart.
+Add another visual and choose Line chart. Select a Date field for the X-axis and a numeric measure such as Sales for the value. If required, change date aggregation to Month.
+Real screenshot reference: https://docs.aws.amazon.com/quick/latest/userguide/quickstart-createanalysis.html
+
+Step 13: Format the visuals.
+Select each visual and modify the title, size, sorting or other available formatting options. Arrange the visuals neatly on the sheet.
+
+Step 14: Add filters if required.
+Use the filter option to restrict the data shown in the visuals. For example, a Category or Date filter can be used. Check that all visuals respond correctly.
+
+Step 15: Create additional visualizations.
+Repeat the Add visual process to create another chart such as a table, KPI or additional bar chart. Use fields appropriate to the dataset.
+
+Step 16: Arrange the analysis sheet.
+Drag the visuals into a clear layout. Resize them so that titles and values are visible. The final sheet should look like a small dashboard/report.
+
+Step 17: Publish the dashboard.
+From the analysis page, select Publish and then Publish dashboard. Choose Publish as a new dashboard, enter a dashboard name such as Practical10-Sales-Dashboard, select the required sheets and click Publish.
+Real screenshot reference: https://docs.aws.amazon.com/quick/latest/userguide/example-create-a-dashboard.html
+
+Step 18: Open the published dashboard.
+After publishing, open the dashboard and verify that all visuals are visible. Check the chart titles, values and filters.
+Real screenshot reference: https://docs.aws.amazon.com/quick/latest/userguide/example-create-a-dashboard.html
+
+Step 19: Record the output.
+Take a screenshot of the final QuickSight dashboard. Record the dataset name, data source, chart types and dashboard name in the practical notebook.

@@ -1,0 +1,77 @@
+Develop, Build and Deploy a Container Application on Google Compute Engine
+Aim: To build a containerized web application, store the container image in a container registry, provision a Google Compute Engine VM and deploy the containerized application so that it can be accessed through the VM.
+
+Step 1: Open Google Cloud Console.
+Open console.cloud.google.com and sign in using the Google Cloud account. Select the project assigned for the practical.
+
+Step 2: Enable/select the required project services.
+Confirm that Compute Engine and Artifact Registry are available in the project. If required by the lab environment, enable the corresponding APIs and wait until activation is complete.
+
+Step 3: Create the application folder.
+On the local computer, create a folder such as MyContainerApp. Keep the web application files and Dockerfile inside this folder.
+
+Step 4: Create a simple web application.
+Create a basic HTML/web application that displays a message such as “Welcome to Google Compute Engine Container Application”. Test the application locally if required.
+
+Step 5: Create the Dockerfile.
+Inside the project folder, create a file named Dockerfile. Define the base image, copy the application files and specify the command used to start the application.
+
+Step 6: Build the Docker image.
+Open a terminal in the project folder and build the image using Docker. Give the image a suitable name and version tag such as my-web-app:v1.
+
+Step 7: Create an Artifact Registry repository.
+In Google Cloud Console, open Artifact Registry and create a Docker repository in the required region. Give it a name such as practical11-repo.
+
+Step 8: Tag the Docker image for Artifact Registry.
+Tag the local image with the complete Artifact Registry image path. The path contains the region, project ID, repository name and image name/tag.
+
+Step 9: Authenticate and push the image.
+Authenticate Docker with the required Google Cloud registry configuration and push the tagged image to Artifact Registry. Confirm that the image appears in the repository.
+
+Step 10: Open Compute Engine VM instances.
+In Google Cloud Console, open Compute Engine and select VM instances. Click Create instance.
+Real screenshot reference: https://cloud.google.com/compute/docs/containers/deploying-containers
+
+Step 11: Enter VM instance details.
+Enter a VM name such as my-container-vm. Select the required region and zone. Keep the machine configuration suitable for the practical and available quota.
+Real screenshot reference: https://cloud.google.com/compute/docs/containers/deploying-containers
+
+Step 12: Configure the operating system/container option.
+Use the Container-Optimized OS/container deployment workflow available in the lab environment. In the older direct-container workflow, the Container section contains Deploy container. Select it when it is available and specify the container image.
+Real screenshot reference: https://cloud.google.com/container-optimized-os/docs/how-to/create-configure-instance
+
+Step 13: Specify the container image.
+Enter the complete Artifact Registry image URL of the image pushed earlier. Verify the project ID, repository, image name and tag carefully.
+Real screenshot reference: https://cloud.google.com/container-optimized-os/docs/how-to/create-configure-instance
+
+Step 14: Configure networking/firewall.
+Enable Allow HTTP traffic when the application is intended to be accessed through HTTP. Configure any additional firewall rule required by the application's listening port.
+
+Step 15: Review and create the VM.
+Review the VM name, region/zone, OS, container image and networking settings. Click Create and wait until the VM status becomes Running.
+Real screenshot reference: https://cloud.google.com/compute/docs/containers/deploying-containers
+
+Step 16: Check the VM details.
+Open the VM instance details page. Verify that the VM is running and locate its External IP address.
+Real screenshot reference: https://cloud.google.com/compute/docs/containers/deploying-containers
+
+Step 17: Open the application in a browser.
+Copy the External IP address and open it in a browser using the application port if required. Wait for the container to start and verify that the web page is displayed.
+Real screenshot reference: https://cloud.google.com/compute/docs/containers/deploying-containers
+
+Step 18: Connect to the VM using SSH.
+From the VM instances page, click SSH for the VM. A terminal session opens. Use Docker commands where supported by the VM/container environment to inspect the running container.
+Real screenshot reference: https://cloud.google.com/compute/docs/containers/deploying-containers
+
+Step 19: Verify the container.
+Run the container-status command available in the environment. For a Docker-based VM, a common verification command is shown below.
+docker ps
+
+
+
+Step 20: Verify logs if required.
+Check container or startup logs if the application is not opening. Confirm that the image was pulled successfully and that the web process is running.
+Real screenshot reference: https://cloud.google.com/compute/docs/containers/deploying-containers
+
+Step 21: Record the final output.
+Take a screenshot of the running VM, the External IP/application output and the container status. Record the VM name, image URL and output in the practical notebook.

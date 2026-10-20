@@ -1,0 +1,47 @@
+Deploy and Monitor Web App using Azure App 
+service.
+
+Step 1: Open portal.azure.com and Login
+Search – Resource groups, and select “Resource groups”
+Step 2: Click on “Create” button
+Step 2: Fill the details as shown in bellow image, and click on "Review+Create" button
+Step 3: Check the details again and click on “Create” button
+Step 4: Search again in search box – “Resource group” to check 
+that “Resource group” is created or not?
+Step 5: Search again in search box – “App Services”, and select 
+“App Services”
+Click on “Create” menu and select “Web App”
+Step 6: Fill the details as shown in bellow image, and click on 
+“Review + create” button, and the click on “Create"
+Step 7: Below screen will be visible, Click on “Go to resource”
+Step 8: Below details are visible, Click on Link given as 
+“Default Domain”
+Step 8: URL opens below like page
+Step 9: Create a folder on your local drive – AzureWebApp
+Step 10: Inside that folder create – index.html, and write below 
+code
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Azure Web App</title>
+</head>
+<body>
+ <h1>Welcome to Azure App Service</h1>
+ <p>My first web application deployed on Microsoft Azure.</p>
+</body>
+</html>
+Step 11: Click on “Open Deployment Center”
+Step 12: Click on “Manual Deployment (Push)”
+Step 13: Upload Zip file by click on “Browse files”
+Step 14: From left menu – Select “Configuration”. Select Stack 
+Settings, and in Startup command write below code
+python -m http.server 8000 --bind 0.0.0.0 --directory /home/site/wwwroot
+press apply button
+Step 15: Turn-On Skip Server-Side Build and Click on “Deploy”
+button
+Step 16: Click on “Browse application”
+Step 17: Final output
+Step 18: Search in search box – “Resource group” and select it.
+Copy resource group name – “RG-WebApp-Demo”
+Select resource group and press “Delete resource group"
+Step 19: Copy and paste Resource group name and press delete.
